@@ -1,0 +1,246 @@
+.main {
+  background: linear-gradient(180deg, #FFFFFF 0%, #F0F1FF 100%);
+  position: relative;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+
+  &__container {
+    padding-top: 63px;
+    padding-bottom: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include Responsive(tablet_2) {
+      flex-direction: column;
+    }
+  }
+
+  &__info {
+    width: 100%;
+    max-width: 457px;
+
+    @include Responsive(tablet_1) {
+      max-width: 398px;
+    }
+
+    @include Responsive(tablet_2) {
+      margin-bottom: 46px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 29px;
+
+    @include Responsive(tablet_1) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 40px;
+    color: $color-gray;
+
+    @include Responsive(tablet_1) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__statistics {
+
+  }
+
+
+  &__img {
+    background: linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%);
+    border-radius: 158.5px;
+    width: 317px;
+    height: 560px;
+
+    @include Responsive(desktop_1) {
+      width: 270px;
+      height: auto;
+    }
+
+    @include Responsive(tablet_1) {
+      width: 216px;
+    }
+
+    @include Responsive(tablet_2) {
+      display: none;
+    }
+  }
+
+  &__img-mobile {
+    display: none;
+
+    @include Responsive(tablet_2) {
+      display: block;
+    }
+  }
+
+  .statistics {
+    position: relative;
+
+    &__box {
+      position: absolute;
+      z-index: 10;
+      background: $color-white;
+      border-radius: 15px;
+      box-shadow: 0px 34px 54px rgba(6, 22, 141, 0.158854);
+    }
+
+    &__time {
+      max-width: 200px;
+      padding: 20px 72px 19px 24px;
+      top: 60%;
+      left: -35%;
+
+      @include Responsive(desktop_1) {
+        top: 80%;
+        left: -22%;
+        max-width: 180px;
+        padding: 20px 45px 19px 24px;
+      }
+
+      @include Responsive(desktop_2) {
+        left: -15%;
+      }
+
+      @include Responsive(tablet_1) {
+        padding: 16px 45px 16px 20px;
+      }
+
+      @include Responsive(tablet_1) {
+        max-width: 155px;
+        top: 70%;
+      }
+    }
+
+    &__members {
+      max-width: 155px;
+      padding: 20px 72px 19px 24px;
+      top: 20%;
+      left: 90%;
+
+      @include Responsive(desktop_1) {
+        top: -7%;
+        left: 75%;
+        max-width: 140px;
+      }
+
+      @include Responsive(desktop_2) {
+        left: 60%;
+      }
+
+      @include Responsive(tablet_1) {
+        padding: 16px 20px;
+      }
+
+      @include Responsive(tablet_1) {
+        left: 75%;
+      }
+    }
+
+    &__course-info {
+      margin-bottom: 2px;
+      @include font(16px, 28px, 700, $color-gray);
+
+      @include Responsive(tablet_1) {
+        @include font(14px, 28px, 700, $color-gray);
+      }
+    }
+
+    &__course-number {
+      margin: 0;
+    }
+  }
+}
+
+
+/* COURSES */
+.courses {
+
+  &__container {
+    padding-top: 50px;
+    padding-bottom: 140px;
+
+    @include Responsive(desktop_2) {
+      padding-top: 33px;
+      padding-bottom: 86px;
+    }
+  }
+
+  &__card-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    @include Responsive(desktop_2) {
+      gap: 11px;
+    }
+  }
+
+  &__card-main {
+    background: $color-gradient-card;
+  }
+
+  &__card-main-title {
+    color: $color-white;
+    margin: 0;
+  }
+
+  &__card {}
+
+  .card {
+    box-shadow: 0px 25px 50px rgba(6, 22, 141, 0.045);
+    border-radius: 15px;
+    max-width: 346px;
+    height: 322px;
+    background-color: $color-white;
+    position: relative;
+    margin-bottom: 52px;
+    padding: 64px 32px 40px 32px;
+
+    @include Responsive(desktop_2) {
+      padding: 56px 21px 32px 32px;
+      max-width: 340px;
+      height: 260px;
+      margin-bottom: 28px;
+    }
+
+    @include Responsive(tablet_2) {
+      height: auto;
+    }
+
+    &__icon {
+      position: absolute;
+      top: -8%;
+      left: 8%;
+    }
+
+    &__info {}
+
+    &__title {
+      margin-bottom: 24px;
+
+      @include Responsive(desktop_2) {
+        margin-bottom: 16px;
+      }
+    }
+
+    &__text {
+      margin-bottom: 24px;
+      color: $color-gray;
+    }
+
+    &__link {
+      color: #F74780;
+    }
+  }
+}

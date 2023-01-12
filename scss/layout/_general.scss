@@ -1,0 +1,17 @@
+.general {
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo-link {}
+
+  &__logo-img{
+    @include Responsive(tablet_3){
+      width: 89px;
+    
+    }
+  }
+}
